@@ -1,0 +1,244 @@
+html {
+  background-color: #ffcea6;
+}
+p {
+  color: rgb(78, 9, 3);
+}
+.logo-container{
+  width: 70%;
+  background-color: #fde5d1;
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin:0 auto 30px auto;
+   border-radius: 40px;
+}
+.logo-container::after {
+  content: "";
+  display: block;
+  width: 120%;              /* 线条宽度为logo的70% */
+  height: 2px;             /* 线条粗细 */
+  background: white;       /* 白色线条 */
+  margin-top: 15px;        /* 与logo的间距 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 可选：添加轻微阴影增强立体感 */
+}
+.logo-container:hover::after {
+  width: 85%;
+  transition: width 0.3s ease;
+}
+.logo{
+  display: block;
+  margin:0px auto;
+  width: 800px;
+  height: auto;
+  z-index:1;
+}
+
+.slider-container {
+    max-width: 900px;
+    margin-right:0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #703905;
+    margin-bottom: 30px;
+}
+
+/* 轮播图主体 */
+.slider {
+    height: 400px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    flex-shrink: 0; /* 防止被压缩 */
+}
+
+.slide {
+    display: none;
+    position: relative;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 400px;
+    height:400px;
+    object-fit: cover;
+    display: block;
+     cursor: pointer;
+  transition: transform 0.3s;
+}
+.slide img:hover {
+  transform: scale(1.02);
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* 导航按钮 */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.3);
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.slider-btn:hover {
+    background: rgba(255,255,255,0.7);
+    color: #ff6b88;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* 导航点 */
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: white;
+}
+
+
+
+
+
+.intro-text{
+  font-family: 'Comic Sans MS', 'Marker Felt', cursive;
+  color:antiquewhite;
+  font-size: 2.0em;
+  text-align: left;
+  margin-left: 15px;
+}
+.feature-list,
+.time-list{
+  background-color:antiquewhite;
+  width:100%;
+  max-width:1000px;
+  margin: 10px auto 0 15px;
+  padding: 0;
+  list-style-type: none;
+  margin: 0 auto 30px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.time-text{
+  font-family: 'Mali', 'Ma Shan Zheng', cursive; /* 手写字体 */
+  font-size: 2.0em;  /* 调小字号 */
+  color: #5e5343;
+  line-height: 1.6;
+  padding: 8px 0;
+  position: relative;
+}
+.feature-list li,
+.time-list li {
+  font-family: 'Mali', 'Ma Shan Zheng', cursive; /* 手写字体 */
+  font-size: 1.2em;  /* 调小字号 */
+  color: #5e5343;
+  line-height: 1.6;
+  padding: 8px 0;
+  position: relative;
+  margin: 0 30px 0 30px;
+}
+
+/* 添加猫爪装饰 */
+.feature-list li::before {
+  content: "🐾";
+  position: absolute;
+  left: -25px;
+}
+.time-list li:first-child {
+  font-weight: bold;
+  color: #00796b;
+}
+.text-container{
+  width: 95%;
+  background-color: #e68434;
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin:0 auto 30px auto;
+   border-radius: 60px;
+}
+.decoration {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .decoration span {
+            font-size: 2em;
+            margin: 0 10px;
+            color: #ff9e6d;
+        }
+.image-description{
+   flex: 1;
+  background-color: antiquewhite;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  min-height: 350px;
+  overflow-y: auto;
+  
+  
+}
+.image-description p {
+  font-family: 'Comic Sans MS', 'Marker Felt', cursive;
+  color: #5e5343;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 0;
+   margin: 0 0 15px 0; /* 段落下间距 */
+  text-indent: 2em; /* 首行缩进 */
+  position: relative;
+  padding-left: 2px;
+}
+
+.slider-content {
+  display: flex; /* 使用flex布局让两个元素并排 */
+  gap: 30px; /* 设置间距 */
+  align-items: flex-start; /* 顶部对齐 */
+}
